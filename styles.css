@@ -1,118 +1,84 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+  --yellow: #F4D04E;
+  --white: #FFFFFF;
+  --grey: #808080;
+  --black: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  display: flex;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: hsl(47, 88%, 63%);
-  align-items: center;
-  justify-content: center;
-  font-family: "Figtree", sans-serif;
+  background-color: var(--yellow);
+  font-size: 1rem;
+  font-family: 'Figtree', sans-serif;
 }
 
-p {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.p-light {
-  color: hsla(0, 0%, 0%, 0.363);
-}
-
-h2 {
-  font-weight: 800;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: hsl(0, 0%, 100%);
-  padding: 1rem 1rem;
-  margin: 0 auto;
-  border-radius: 20px;
-  width: 20rem;
-  justify-content: center;
+.container {
+  max-width: 90%;
+  background-color: var(--white);
+  margin: 5rem auto;
+  padding: 1.5rem 1.5rem;
+  border-radius: 1rem;
   border: 1px solid black;
-  box-shadow: 12px 12px 2px 2px;
+  box-shadow: 0.625rem 0.625rem 0 black;
 }
 
-.image-bg {
-  border-radius: 10px;
-}
-
-.learning,
-p,
-h2,
-.avatar {
-  margin-bottom: 0.5rem;
-}
-
-.image-avatar {
-  margin-right: 0.5rem;
+.card-image {
+  width: 100%;
+  border-radius: 0.7rem;
 }
 
 .learning {
-  margin-top: 2rem;
-  background-color: hsl(47, 88%, 63%);
-  border-radius: 3px;
-  width: 5rem;
-  padding: 7px 5px;
-  text-align: center;
+  display: inline-block;
+  background-color: var(--yellow);
+  font-size: 1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.3rem;
+}
+
+p, h1, h2, .card-image {
+  margin-bottom: 1.3rem;
+}
+
+.learning, .avatar-txt, h1 {
   font-weight: 800;
 }
 
-.avatar {
+.p-published {
+  font-weight: 600;
+}
+
+.p-description {
+  color: var(--grey);
+}
+
+.avatar-cont {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 2rem;
+  gap: 0.7rem;
 }
 
-.txt-greg {
-  font-weight: 800;
-  margin-left: 0.5rem;
+.avatar-txt {
+  font-weight: bold;
 }
-.image-avatar {
+
+.avatar-image {
   width: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
-  main {
-    max-width: 70%;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .p-small {
-    font-size: 12px;
-  }
-
-  .learning {
-    width: 4rem;
-    font-size: 12px;
-    margin-bottom: -2px;
-  }
-
-  .card {
-    max-width: 100%;
-    margin-left: -1rem;
-  }
-
-  h2 {
-    font-size: 19px;
-    margin-top: 10px;
-  }
-
-  p {
-    font-size: 13px;
-  }
-
-  .txt-greg {
-    margin-left: 1px;
-    font-size: 14px;
-  }
-
-  .image-avatar {
-    width: 2rem;
+@media screen and (min-width: 700px) {
+  .container {
+    margin: 14.7rem auto;
+    max-width: 24rem;
   }
 }
