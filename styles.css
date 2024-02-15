@@ -24,16 +24,17 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .container {
-  max-width: 21.875rem;
+  max-width: 20.625rem;
   background-color: var(--white);
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   border: 0.065rem solid var(--black);
   box-shadow: 0.45rem 0.475rem 0 var(--black);
+  overflow: hidden;
 }
 
 .card-image {
@@ -57,6 +58,7 @@ body {
 .post-description {
   color: var(--grey);
   line-height: 1.5rem;
+  max-height: 10rem;
 }
 
 .learning, h1 {
@@ -66,6 +68,7 @@ body {
 h1 {
   font-size: 1.5rem;
   cursor: pointer;
+  max-height: 5rem;
 }
 
 h1:hover {
@@ -83,6 +86,16 @@ h1:hover {
   align-items: center;
   gap: 0.75rem;
   font-weight: 800;
+}
+
+.post-description, .learning, .avatar-wrapper, h1, .post-data {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.post-data, .avatar-wrapper, .learning {
+  max-height: 3rem;
 }
 
 .avatar-image {
